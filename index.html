@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1" name="viewport">
+    <title>Fitness Center</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=League Spartan" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body class="container-fluid" data-bs-theme="dark">
+<header class="card-header bg-white row">
+    <div class="row row-cols-2">
+        <div>
+            <img class="logo" src="Fitness_20240528_233935_0000.png">
+        </div>
+        <div class="menu">
+            <ul class="row row-cols-5">
+                <li class="list-unstyled list-inline-item"><a class="menu-item" href="index.html">ACASA</a></li>
+                <li class="list-unstyled list-inline-item"><a class="menu-item" href="#register">INSCRIERE</a></li>
+                <li class="list-unstyled list-inline-item"><a class="menu-item" href="#about">DESPRE NOI</a></li>
+                <li class="list-unstyled list-inline-item"><a class="menu-item" href="#footer">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div id="image-container">
+    <img id="first-image" src="fitness_1.jpg" alt="Fitness Image">
+    <div class="overlay-text" id="first-text">SCHIMBA-TI STILUL DE VIATA</div>
+</div>
+<div class="form-container">
+    <h1 class="form-title">INSCRIE-TE ACUM</h1>
+    <form action="submit" id="register">
+        <div class="form-group row-layout">
+            <label for="email">Email:</label>
+            <input id="email" name="email" placeholder="someone@example.com" required type="email">
+        </div>
+        <div class="form-group row-layout">
+            <label for="age">Varsta:</label>
+            <input id="age" name="age" placeholder="18" required type="number">
+        </div>
+        <div class="form-group row-layout">
+            <label>Sex:</label>
+            <div class="radio-group">
+                <input id="female" name="gender" required type="radio" value="Feminin">
+                <label class="radio-label" for="female">Feminin</label>
+                <input id="male" name="gender" required type="radio" value="Masculin">
+                <label class="radio-label" for="male">Masculin</label>
+            </div>
+        </div>
+        <div class="form-group row-layout">
+            <label for="height">Inaltime:</label>
+            <input id="height" name="height" placeholder="175 cm" required type="text">
+        </div>
+        <div class="form-group row-layout">
+            <label for="weight">Greutate:</label>
+            <input id="weight" name="weight" placeholder="70 kg" required type="text">
+        </div>
+        <div class="form-group row-layout">
+            <label for="somatic">Tip somatic:</label>
+            <input id="somatic" name="somatic" placeholder="Endomorf" required type="text">
+        </div>
+        <div class="form-group column-layout">
+            <label for="workout-days">Cate zile pe saptamana planuiesti sa te antrenezi?</label>
+            <input id="workout-days" name="workout-days" placeholder="3 zile" required type="text">
+        </div>
+        <div class="form-group column-layout">
+            <label for="daily-workouts">De cate ori pe zi planuiesti sa mergi la antrenament?</label>
+            <input id="daily-workouts" name="daily-workouts" placeholder="O data" required type="text">
+        </div>
+        <div class="form-group column-layout">
+            <label for="experience">Ai vreo experienta anterioara cu antrenamentele sau cu frecventarea unei sali de
+                fitness?</label>
+            <input id="experience" name="experience" placeholder="Ma antrenez acasa" required type="text">
+        </div>
+        <div class="form-group column-layout">
+            <label for="health">Exista vreo afectiune sau problema de sanatate pe care ar trebui sa o aduci la
+                cunostinta noastra?</label>
+            <input id="health" name="health" placeholder="Sunt sanatos" required type="text">
+        </div>
+        <div class="form-group column-layout">
+            <label>Care sunt obiectivele tale prin participarea la antrenamente in sala de fitness?</label>
+            <div class="checkbox-group">
+                <input id="lose-weight" name="objectives" type="checkbox" value="Pierdere in greutate">
+                <label class="checkbox-label" for="lose-weight">Pierdere in greutate</label>
+                <input id="gain-muscle" name="objectives" type="checkbox" value="Crestere musculara">
+                <label class="checkbox-label" for="gain-muscle">Crestere musculara</label>
+                <input id="tone" name="objectives" type="checkbox" value="Tonifiere si definire musculara">
+                <label class="checkbox-label" for="tone">Tonifiere si definire musculara</label>
+                <input id="cardio" name="objectives" type="checkbox" value="Imbunatatire sanatatii cardiovasculare">
+                <label class="checkbox-label" for="cardio">Imbunatatirea sanatatii cardiovasculare</label>
+            </div>
+        </div>
+        <div class="form-group column-layout">
+            <label>In cat timp iti doresti sa observi rezultatele dorite?</label>
+            <div class="checkbox-group">
+                <input id="1-month" name="timeline" type="checkbox" value="O luna">
+                <label class="checkbox-label" for="1-month">O luna</label>
+                <input id="3-months" name="timeline" type="checkbox" value="3 luni">
+                <label class="checkbox-label" for="3-months">3 luni</label>
+                <input id="6-months" name="timeline" type="checkbox" value="6 luni">
+                <label class="checkbox-label" for="6-months">6 luni</label>
+                <input id="1-year" name="timeline" type="checkbox" value="Un an">
+                <label class="checkbox-label" for="1-year">Un an</label>
+            </div>
+        </div>
+        <div class="form-group column-layout">
+            <label>Care sunt abilitatile pe care iti propui sa le imbunatatesti sau sa le dobandesti?</label>
+            <div class="checkbox-group">
+                <input id="strength" name="abilities" type="checkbox" value="Forta">
+                <label class="checkbox-label" for="strength">Forta</label>
+                <input id="resistance" name="abilities" type="checkbox" value="Rezistenta">
+                <label class="checkbox-label" for="resistance">Rezistenta</label>
+                <input id="performance" name="abilities" type="checkbox" value="Performanta">
+                <label class="checkbox-label" for="performance">Performanta</label>
+                <input id="flexibility" name="abilities" type="checkbox" value="Flexibilitate">
+                <label class="checkbox-label" for="flexibility">Flexibilitate</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit">Trimite datele</button>
+        </div>
+    </form>
+</div>
+<div id="about" class="bg-white row">
+    <div class="text-center">
+        <table class="stats-table">
+            <tr>
+                <td class="stats-number"><h1>10000</h1></td>
+                <td class="stats-number"><h1>30</h1></td>
+                <td class="stats-number"><h1>10</h1></td>
+            </tr>
+            <tr>
+                <td class="stats-label"><h1>Clienti multumiti</h1></td>
+                <td class="stats-label"><h1>Sali de fitness</h1></td>
+                <td class="stats-label"><h1>Orase</h1></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<footer class="card-footer row bg-light-subtle" id="footer">
+    <div class="col-12 text-center" style="margin-bottom: 1%">
+        <h1>Contact</h1>
+        <div class="contact">
+            <ul class="row row-cols-5">
+                <li class="list-unstyled list-inline-item"><a href="https://facebook.com"><i
+                        class="fab fa-facebook"></i> Facebook</a></li>
+                <li class="list-unstyled list-inline-item"><a href="https://instagram.com"><i
+                        class="fab fa-instagram"></i> Instagram</a></li>
+                <li class="list-unstyled list-inline-item"><a href="tel:+40712345678"><i class="fas fa-phone"></i>
+                    +40712345678</a></li>
+                <li class="list-unstyled list-inline-item"><a href="mailto:fitness@center.com"><i
+                        class="far fa-envelope"></i> fitness@center.com</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
